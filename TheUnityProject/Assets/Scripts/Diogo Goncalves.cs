@@ -9,18 +9,19 @@ using UnityEngine.PlayerLoop;
 public class DiogoGonclaves : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float turnSpeed = 1;
-   
+    //[SerializeField] private float turnSpeed = 1;
+   [SerializeField]
     private Rigidbody krop;
 
     private float backAnForthInput;
     private float sidewaysInput;
     
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -34,10 +35,15 @@ public class DiogoGonclaves : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //transform.Rotate(Vector3.up,sidewaysInput);
         Vector3 moveVector = transform.forward * (speed * backAnForthInput);
         Vector3 leftrightVector = transform.right * (speed * sidewaysInput);
-        moveVector.y = krop.velocity.y;
-        krop.velocity = moveVector;
+        Vector3 final = moveVector + leftrightVector;
+        final.y = krop.velocity.y;
+        //krop.velocity = moveVector;
+        //leftrightVector.x = krop.velocity.x;
+        krop.velocity = final;
+        
         // if (Input.GetAxis("Vertical") * speed);
         //krop = gameObject.GetComponent<Rigidbody>();
         //krop.velocity = transform.forward * speed;
