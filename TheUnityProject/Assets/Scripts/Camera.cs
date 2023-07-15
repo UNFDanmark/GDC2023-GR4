@@ -8,22 +8,26 @@ public class Camera : MonoBehaviour
     [SerializeField] private float turnSpeed = 10;
   
     
-    private float turnInput;
+    [SerializeField] public float turnInputHorizontal;
+    //private float turnInputVertical;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        turnInput = Input.GetAxis("Mouse X");
+        turnInputHorizontal = Input.GetAxis("Mouse X");
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
+        //turnInputVertical = Input.GetAxis("Mouse Y");
     }
 
     private void FixedUpdate()
     {
-        transform.Rotate(Vector3.up,turnSpeed * turnInput);
+        
+        //transform.Rotate(Vector3.up, turnSpeed * turnInputVertical);
     }
 }
