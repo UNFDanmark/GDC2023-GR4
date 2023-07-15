@@ -9,9 +9,10 @@ using UnityEngine.PlayerLoop;
 public class DiogoGonclaves : MonoBehaviour
 {
     [SerializeField] private float speed;
-    //[SerializeField] private float turnSpeed = 1;
+    [SerializeField] private float turnSpeed = 10000;
    [SerializeField]
     private Rigidbody krop;
+    [SerializeField] public float turnInputHorizontal;
 
     private float backAnForthInput;
     private float sidewaysInput;
@@ -29,13 +30,15 @@ public class DiogoGonclaves : MonoBehaviour
     {
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
+        turnInputHorizontal = Input.GetAxis("Mouse X");
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
         
     }
 
 
     private void FixedUpdate()
     {
-        //transform.Rotate(Vector3.up,sidewaysInput);
+        
         Vector3 moveVector = transform.forward * (speed * backAnForthInput);
         Vector3 leftrightVector = transform.right * (speed * sidewaysInput);
         Vector3 final = moveVector + leftrightVector;
