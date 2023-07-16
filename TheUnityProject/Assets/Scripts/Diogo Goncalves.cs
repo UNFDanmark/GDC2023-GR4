@@ -13,6 +13,7 @@ public class DiogoGonclaves : MonoBehaviour
    [SerializeField]
     private Rigidbody krop;
     [SerializeField] public float turnInputHorizontal;
+    [SerializeField] private float dashspeed;
 
     private float backAnForthInput;
     private float sidewaysInput;
@@ -39,23 +40,24 @@ public class DiogoGonclaves : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //get walkForce
+        Vector3 moveVector = transform.forward * (backAnForthInput);
+        Vector3 leftrightVector = transform.right * (sidewaysInput);
+        Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+        Vector3 walkForce = moveDirection * speed;
         
-        Vector3 moveVector = transform.forward * (speed * backAnForthInput);
-        Vector3 leftrightVector = transform.right * (speed * sidewaysInput);
-        Vector3 final = moveVector + leftrightVector;
-        final.y = krop.velocity.y;
-        //krop.velocity = moveVector;
-        //leftrightVector.x = krop.velocity.x;
-        krop.velocity = final;
+        //apply gravity
+        Vector3 finalForce = walkForce;
+        finalForce.y = krop.velocity.y;
+
+        //apply dash
+        if (Input.GetButtonDown("Dash"))
+        {
+            Vector3 dashForce = dashspeed * moveDirection;
+            finalForce = finalForce + dashForce;
+        }
         
-        // if (Input.GetAxis("Vertical") * speed);
-        //krop = gameObject.GetComponent<Rigidbody>();
-        //krop.velocity = transform.forward * speed;
-        
-        //transform.(Vector3.up, );
-                 //Vector3 moveVector = transform.forward * (speed * moveInput);
-                 //moveVector.y = krop.velocity.y;
-                 //krop.velocity = moveVector;
+        krop.velocity = finalForce;
 
     }
 
