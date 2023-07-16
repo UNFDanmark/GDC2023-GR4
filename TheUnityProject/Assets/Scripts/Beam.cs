@@ -12,6 +12,8 @@ public class Beam : MonoBehaviour
     public LayerMask fjender;
 
     public LayerMask wall;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,9 @@ public class Beam : MonoBehaviour
         Ray beamRay = new Ray(origin, direction);
         if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
+            enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
+            fjendekode.hp -= 10;
+            print(fjendekode.hp);
             Debug.DrawRay(origin, direction * 1000, Color.red);
             print("fjender");
             return true;
@@ -55,7 +60,10 @@ public class Beam : MonoBehaviour
      
     }
 
-
+    void DealDamage()
+    {
+        
+    }
 
 }
        
