@@ -33,8 +33,20 @@ public class DiogoGonclaves : MonoBehaviour
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
-        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
         
+        
+        if (Input.GetButtonDown("Dash"))
+        {
+            Vector3 moveVector = transform.forward * (backAnForthInput);
+            Vector3 leftrightVector = transform.right * (sidewaysInput);
+            Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+            
+            krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
+            
+            
+            
+        }
     }
 
 
@@ -51,11 +63,7 @@ public class DiogoGonclaves : MonoBehaviour
         finalForce.y = krop.velocity.y;
 
         //apply dash
-        if (Input.GetButtonDown("Dash"))
-        {
-            Vector3 dashForce = dashspeed * moveDirection;
-            finalForce = finalForce + dashForce;
-        }
+       
         
         krop.velocity = finalForce;
 
