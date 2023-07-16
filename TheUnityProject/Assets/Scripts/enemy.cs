@@ -6,6 +6,8 @@ public class enemy : MonoBehaviour
 {
     public int hp;
     
+    public enemyspawner fjendeCamp;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class enemy : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            fjendeCamp.currentAmountOfEnemies--;
         }
     }
 }
