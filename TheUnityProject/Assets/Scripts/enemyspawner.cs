@@ -19,6 +19,7 @@ public class enemyspawner : MonoBehaviour
  
     private float timeLeftBetweenSpawns;
     [SerializeField] public int currentAmountOfEnemies;
+    [SerializeField] private Transform player;
 
     private float timeLeft;
     
@@ -37,7 +38,8 @@ public class enemyspawner : MonoBehaviour
         {
             
             GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
-            Enemyscript = newEnemy.GetComponent<enemy>();
+            enemy enemyscript = newEnemy.GetComponent<enemy>();
+            enemyscript.player = player;
             
   
             
@@ -55,5 +57,7 @@ public class enemyspawner : MonoBehaviour
         
         return new Vector3(x, 0.75f, y);
     }
+    
+    
 }
 
