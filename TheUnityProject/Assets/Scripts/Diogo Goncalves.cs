@@ -17,6 +17,7 @@ public class DiogoGonclaves : MonoBehaviour
 
     private float backAnForthInput;
     private float sidewaysInput;
+    public int playerhp;
     
     
 
@@ -30,6 +31,11 @@ public class DiogoGonclaves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerhp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
@@ -50,7 +56,7 @@ public class DiogoGonclaves : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         //get walkForce
         Vector3 moveVector = transform.forward * (backAnForthInput);

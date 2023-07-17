@@ -729,7 +729,8 @@ MonoBehaviour:
   Enemy: {fileID: 7060359035336988264, guid: 70e1c2bfd65256146852c97d38f275b1, type: 3}
   spawnCooldown: 4
   maxAmountOfEnemies: 5
-  Enemyscript: {fileID: 0}
+  Enemyscript: {fileID: 8235045450397303727, guid: 70e1c2bfd65256146852c97d38f275b1,
+    type: 3}
   currentAmountOfEnemies: 0
 --- !u!4 &729065405
 Transform:
@@ -739,7 +740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729065403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.452118, y: 38.00547, z: 32.766766}
+  m_LocalPosition: {x: -7.452118, y: 42.24, z: 32.766766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1105,11 +1106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48208455414e9314eaa5c3fdf94177cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
   turnSpeed: 1000
   krop: {fileID: 1390865053}
   turnInputHorizontal: 0
   dashspeed: 1000
+  playerhp: 100
 --- !u!114 &1390865059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,6 +1307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Fjende
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235045450397303727, guid: 70e1c2bfd65256146852c97d38f275b1,
+        type: 3}
+      propertyPath: enemyhp
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

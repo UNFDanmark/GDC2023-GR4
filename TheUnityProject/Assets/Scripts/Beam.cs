@@ -39,8 +39,8 @@ public class Beam : MonoBehaviour
         if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
-            fjendekode.hp -= 10;
-            print(fjendekode.hp);
+            fjendekode.enemyhp -= 10;
+            print(fjendekode.enemyhp);
             Debug.DrawRay(origin, direction * 1000, Color.red);
             print("fjender");
             return true;
