@@ -11,6 +11,7 @@ public class enemy : MonoBehaviour
     public enemyspawner fjendeCamp;
     private NavMeshAgent agent;
     public Transform player;
+    [SerializeField] public int score;
 
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class enemy : MonoBehaviour
         if (enemyhp <= 0)
         {
             Destroy(gameObject);
-            
+            score += 10;
         }
     }
     

@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75249f1fa24bba645a75d2d4b751d527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tmpText: {fileID: 710866288}
+  hpText: {fileID: 710866288}
   GoncalvesScript: {fileID: 1390865058}
 --- !u!1 &729065403
 GameObject:
@@ -1837,7 +1837,7 @@ Transform:
   m_GameObject: {fileID: 1390865052}
   m_LocalRotation: {x: -0, y: -0.99999005, z: -0, w: -0.0044687483}
   m_LocalPosition: {x: 4.469428, y: 5.13, z: 31.83224}
-  m_LocalScale: {x: 3.270949, y: 3.2880528, z: 5.0421205}
+  m_LocalScale: {x: 3, y: 3, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 907615174}
@@ -1862,7 +1862,7 @@ MonoBehaviour:
   krop: {fileID: 1390865053}
   turnInputHorizontal: 0
   dashspeed: 1000
-  playerhp: 10000
+  playerhp: 100
   damagecooldown: 1
   dashlyd: {fileID: 1390865063}
 --- !u!114 &1390865059

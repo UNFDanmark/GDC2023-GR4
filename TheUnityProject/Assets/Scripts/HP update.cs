@@ -8,14 +8,23 @@ public class HPupdate : MonoBehaviour
 {
     private int HP;
 
-    public TMP_Text tmpText;
+    //private int scoreupdate;
+
+    public TMP_Text hpText;
+
+    //public TMP_Text scoreText;
 
     public DiogoGoncalves GoncalvesScript;
+
+    //public enemy enemyscript;
 
     // Update is called once per frame
     void Update()
     {
+        //scoreupdate = enemyscript.score;
         HP = GoncalvesScript.playerhp;
-        tmpText.text = "HP: " + HP;
+        //scoreupdate = ememyscript.score;
+        hpText.text = "HP: " + HP;
+        //scoreText.text = "Score :" + scoreupdate;
     }
 }
