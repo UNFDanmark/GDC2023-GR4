@@ -79,7 +79,7 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (collision.collider.tag == "Fjende")
         {
-            playerhp -= 10;
+            playerhp -= 5 ;
         }
     }
 
