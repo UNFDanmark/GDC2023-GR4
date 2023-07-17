@@ -18,6 +18,8 @@ public class DiogoGoncalves : MonoBehaviour
     private float backAnForthInput;
     private float sidewaysInput;
     [SerializeField] public int playerhp;
+    [SerializeField]private float damagecooldown;
+    private float damagecooldowntimer;
     
     
 
@@ -53,6 +55,11 @@ public class DiogoGoncalves : MonoBehaviour
             
             
         }
+
+        if (damagecooldowntimer > 0)
+        {
+            damagecooldowntimer -= Time.deltaTime;
+        }
     }
 
 
@@ -77,10 +84,16 @@ public class DiogoGoncalves : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Fjende")
+        if (damagecooldowntimer <= 0)
         {
-            playerhp -= 5 ;
+            if (collision.collider.tag == "Fjende")
+            {
+                playerhp -= 5;
+                damagecooldowntimer = damagecooldown;
+            }
         }
+        
+   
     }
 
 
