@@ -20,6 +20,7 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField] public int playerhp;
     [SerializeField]private float damagecooldown;
     private float damagecooldowntimer;
+    [SerializeField] public AudioSource dashlyd;
     
     
 
@@ -51,9 +52,10 @@ public class DiogoGoncalves : MonoBehaviour
             Vector3 moveDirection = (moveVector + leftrightVector).normalized;
             
             krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
-            
-            
-            
+
+            dashlyd.Play();
+
+
         }
 
         if (damagecooldowntimer > 0)
