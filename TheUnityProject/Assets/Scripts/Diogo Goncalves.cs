@@ -17,7 +17,7 @@ public class DiogoGonclaves : MonoBehaviour
 
     private float backAnForthInput;
     private float sidewaysInput;
-    public int playerhp;
+    [SerializeField] public int playerhp;
     
     
 
@@ -73,6 +73,14 @@ public class DiogoGonclaves : MonoBehaviour
         
         krop.velocity = finalForce;
 
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Fjende")
+        {
+            playerhp -= 10;
+        }
     }
 
 
