@@ -8,7 +8,7 @@ public class HPupdate : MonoBehaviour
 {
     private int HP;
 
-    //private int scoreupdate;
+    private int scoreupdate;
 
     public TMP_Text hpText;
 

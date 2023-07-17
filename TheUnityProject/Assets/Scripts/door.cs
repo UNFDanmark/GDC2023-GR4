@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class roomgeneration : MonoBehaviour
 {
@@ -14,5 +16,13 @@ public class roomgeneration : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "door")
+        {
+            SceneManager.LoadScene("game over");
+        }
     }
 }
