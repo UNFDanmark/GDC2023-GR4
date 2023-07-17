@@ -6,9 +6,8 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     [SerializeField] private float turnSpeed = 10;
-  
-    
     [SerializeField] public float turnInputHorizontal;
+    
     //private float turnInputVertical;
     
     // Start is called before the first frame update
@@ -22,12 +21,7 @@ public class Camera : MonoBehaviour
     {
         turnInputHorizontal = Input.GetAxis("Mouse X");
         transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
-        //turnInputVertical = Input.GetAxis("Mouse Y");
+        
     }
 
-    private void FixedUpdate()
-    {
-        
-        //transform.Rotate(Vector3.up, turnSpeed * turnInputVertical);
-    }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 
 
-public class DiogoGonclaves : MonoBehaviour
+public class DiogoGoncalves : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float turnSpeed = 10000;
@@ -17,7 +17,10 @@ public class DiogoGonclaves : MonoBehaviour
 
     private float backAnForthInput;
     private float sidewaysInput;
-    public int playerhp;
+    [SerializeField] public int playerhp;
+    [SerializeField]private float damagecooldown;
+    private float damagecooldowntimer;
+    [SerializeField] public AudioSource dashlyd;
     
     
 
@@ -49,9 +52,15 @@ public class DiogoGonclaves : MonoBehaviour
             Vector3 moveDirection = (moveVector + leftrightVector).normalized;
             
             krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
-            
-            
-            
+
+            dashlyd.Play();
+
+
+        }
+
+        if (damagecooldowntimer > 0)
+        {
+            damagecooldowntimer -= Time.deltaTime;
         }
     }
 
@@ -73,6 +82,20 @@ public class DiogoGonclaves : MonoBehaviour
         
         krop.velocity = finalForce;
 
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (damagecooldowntimer <= 0)
+        {
+            if (collision.collider.tag == "Fjende")
+            {
+                playerhp -= 5;
+                damagecooldowntimer = damagecooldown;
+            }
+        }
+        
+   
     }
 
 

@@ -9,6 +9,7 @@ public class Beam : MonoBehaviour
     private Vector3 direction;
     private float maxDistance = 100;
 
+    public AudioSource beamlyd;
     public LayerMask fjender;
 
     public LayerMask wall;
@@ -23,9 +24,10 @@ public class Beam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             beamcheck();
+            beamlyd.Play();
         }
     }
 
@@ -58,11 +60,6 @@ public class Beam : MonoBehaviour
         }
 
      
-    }
-
-    void DealDamage()
-    {
-        
     }
 
 }

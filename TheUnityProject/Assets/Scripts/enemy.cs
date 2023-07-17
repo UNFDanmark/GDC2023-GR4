@@ -11,9 +11,8 @@ public class enemy : MonoBehaviour
     public enemyspawner fjendeCamp;
     private NavMeshAgent agent;
     public Transform player;
-    private Collision
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +29,5 @@ public class enemy : MonoBehaviour
             
         }
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        
-    }
+    
 }
