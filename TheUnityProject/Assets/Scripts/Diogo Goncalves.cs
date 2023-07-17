@@ -6,17 +6,22 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 
 
-public class DiogoGonclaves : MonoBehaviour
+public class DiogoGoncalves : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float turnSpeed = 10000;
    [SerializeField]
     private Rigidbody krop;
     [SerializeField] public float turnInputHorizontal;
+    [SerializeField] private float dashspeed;
 
     private float backAnForthInput;
     private float sidewaysInput;
-    
+    [SerializeField] public int playerhp;
+    [SerializeField]private float damagecooldown;
+    private float damagecooldowntimer;
+    [SerializeField] public AudioSource dashlyd;
+   
     
 
     // Start is called before the first frame update
@@ -29,34 +34,68 @@ public class DiogoGonclaves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerhp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
-        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
         
+        
+        if (Input.GetButtonDown("Dash"))
+        {
+            Vector3 moveVector = transform.forward * (backAnForthInput);
+            Vector3 leftrightVector = transform.right * (sidewaysInput);
+            Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+            
+            krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
+
+            dashlyd.Play();
+
+
+        }
+
+        if (damagecooldowntimer > 0)
+        {
+            damagecooldowntimer -= Time.deltaTime;
+        }
     }
 
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        //get walkForce
+        Vector3 moveVector = transform.forward * (backAnForthInput);
+        Vector3 leftrightVector = transform.right * (sidewaysInput);
+        Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+        Vector3 walkForce = moveDirection * speed;
         
-        Vector3 moveVector = transform.forward * (speed * backAnForthInput);
-        Vector3 leftrightVector = transform.right * (speed * sidewaysInput);
-        Vector3 final = moveVector + leftrightVector;
-        final.y = krop.velocity.y;
-        //krop.velocity = moveVector;
-        //leftrightVector.x = krop.velocity.x;
-        krop.velocity = final;
-        
-        // if (Input.GetAxis("Vertical") * speed);
-        //krop = gameObject.GetComponent<Rigidbody>();
-        //krop.velocity = transform.forward * speed;
-        
-        //transform.(Vector3.up, );
-                 //Vector3 moveVector = transform.forward * (speed * moveInput);
-                 //moveVector.y = krop.velocity.y;
-                 //krop.velocity = moveVector;
+        //apply gravity
+        Vector3 finalForce = walkForce;
+        finalForce.y = krop.velocity.y;
 
+        //apply dash
+       
+        
+        krop.velocity = finalForce;
+
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (damagecooldowntimer <= 0)
+        {
+            if (collision.collider.tag == "Fjende")
+            {
+                playerhp -= 10;
+                damagecooldowntimer = damagecooldown;
+            }
+        }
+        
+   
     }
 
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Jord
   - Bane
+  - Fjende
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - enemies
+  - "v\xE6g"
   - 
   - 
   - 

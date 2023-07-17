@@ -7,11 +7,14 @@ public class Beam : MonoBehaviour
 {
     private Vector3 origin;
     private Vector3 direction;
-    private float maxDistance = 100;
+    private int maxDistance = 100000000;
 
+    public AudioSource beamlyd;
     public LayerMask fjender;
 
     public LayerMask wall;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +24,10 @@ public class Beam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             beamcheck();
+            beamlyd.Play();
         }
     }
 
@@ -36,6 +40,9 @@ public class Beam : MonoBehaviour
         Ray beamRay = new Ray(origin, direction);
         if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
+            enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
+            fjendekode.enemyhp -= 10;
+            print(fjendekode.enemyhp);
             Debug.DrawRay(origin, direction * 1000, Color.red);
             print("fjender");
             return true;
@@ -54,8 +61,6 @@ public class Beam : MonoBehaviour
 
      
     }
-
-
 
 }
        
