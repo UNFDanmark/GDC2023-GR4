@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class HPupdate : MonoBehaviour
 {
-    public int hp;
+    private int HP;
 
     public TMP_Text tmpText;
 
     // Update is called once per frame
     void Update()
     {
-        
+        HP = DiogoGoncalves.;
     }
 }

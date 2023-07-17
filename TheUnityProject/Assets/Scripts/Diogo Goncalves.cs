@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 
 
-public class DiogoGonclaves : MonoBehaviour
+public class DiogoGoncalves : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float turnSpeed = 10000;
