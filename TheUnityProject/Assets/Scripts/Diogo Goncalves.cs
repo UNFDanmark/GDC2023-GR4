@@ -21,7 +21,7 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldown;
     private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
-    
+   
     
 
     // Start is called before the first frame update
@@ -90,7 +90,7 @@ public class DiogoGoncalves : MonoBehaviour
         {
             if (collision.collider.tag == "Fjende")
             {
-                playerhp -= 5;
+                playerhp -= 10;
                 damagecooldowntimer = damagecooldown;
             }
         }

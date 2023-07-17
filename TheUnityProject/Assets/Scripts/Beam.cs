@@ -7,7 +7,7 @@ public class Beam : MonoBehaviour
 {
     private Vector3 origin;
     private Vector3 direction;
-    private float maxDistance = 100;
+    private int maxDistance = 100000000;
 
     public AudioSource beamlyd;
     public LayerMask fjender;

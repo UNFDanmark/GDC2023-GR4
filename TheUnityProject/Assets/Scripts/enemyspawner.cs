@@ -21,7 +21,7 @@ public class enemyspawner : MonoBehaviour
     [SerializeField] public int currentAmountOfEnemies;
     [SerializeField] private Transform player;
 
-    private float timeLeft;
+    private int timeLeft;
     
     
     // Start is called before the first frame update
