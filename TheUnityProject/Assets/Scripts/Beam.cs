@@ -27,7 +27,6 @@ public class Beam : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             beamcheck();
-            beamlyd.Play();
         }
     }
 
