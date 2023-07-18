@@ -8,6 +8,8 @@ TagManager:
   - Bane
   - Fjende
   - Door
+  - Spawnpoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
