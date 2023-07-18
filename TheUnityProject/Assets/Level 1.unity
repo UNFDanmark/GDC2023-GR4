@@ -2947,32 +2947,32 @@ PrefabInstance:
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 194.02406
+      value: 55.49482
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 133.069
+      value: 53.089207
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: -11.571441
+      value: -4.616542
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8
+      value: 13.93
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.4
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 7301369305039113917, guid: 3b290323ee30a7a43b48d3d1fd8fdca0,
         type: 3}
@@ -5075,7 +5075,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 8031613143380070403, guid: 156477bb349b22d419e6a7f4f6ba15a9,
+      objectReference: {fileID: 7060359035336988264, guid: 70e1c2bfd65256146852c97d38f275b1,
         type: 3}
     - target: {fileID: 8680063336230567924, guid: fc447f8191a75fe468858a0e4164855d,
         type: 3}
@@ -5087,6 +5087,11 @@ PrefabInstance:
       propertyPath: spawnArea
       value: 
       objectReference: {fileID: 1619008906}
+    - target: {fileID: 8680063336230567924, guid: fc447f8191a75fe468858a0e4164855d,
+        type: 3}
+      propertyPath: maxAmountOfEnemies
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5109,6 +5114,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223163802495699641, guid: 156477bb349b22d419e6a7f4f6ba15a9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223163802495699641, guid: 156477bb349b22d419e6a7f4f6ba15a9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223163802495699641, guid: 156477bb349b22d419e6a7f4f6ba15a9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7223163802495699641, guid: 156477bb349b22d419e6a7f4f6ba15a9,
         type: 3}
@@ -5164,6 +5184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mosq
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031613143380070403, guid: 156477bb349b22d419e6a7f4f6ba15a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

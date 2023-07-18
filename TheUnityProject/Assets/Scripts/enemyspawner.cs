@@ -6,11 +6,12 @@ using UnityEngine;
 public class enemyspawner : MonoBehaviour
 {
     
-    [SerializeField] private float cooldown;
-    [SerializeField] private int maxamount;
+
+    
     [SerializeField] private Transform spawnArea;
     [SerializeField] private GameObject Enemy;
-    [SerializeField] private float spawnCooldown;
+    private List<enemy> enemyAmount = new List<enemy>();
+    [SerializeField] private int spawnCount = 0;
     [SerializeField] private int maxAmountOfEnemies;
     
   
@@ -19,7 +20,7 @@ public class enemyspawner : MonoBehaviour
         
  
     private float timeLeftBetweenSpawns;
-    [SerializeField] public int currentAmountOfEnemies;
+
     [SerializeField] private Transform player;
 
     private int timeLeft;
@@ -40,7 +41,7 @@ public class enemyspawner : MonoBehaviour
 
     public IEnumerator CallSpawner()
     {
-        while (true)
+        while (maxAmountOfEnemies > spawnCount)
         {
             Debug.Log("Started at timestamp: " + Time.time);
             yield return new WaitForSeconds(wait);
@@ -64,7 +65,9 @@ public class enemyspawner : MonoBehaviour
         enemy Enemyscript = newEnemy.GetComponent<enemy>();
         print(Enemyscript);
         Enemyscript.player = player;
-        currentAmountOfEnemies++;
+        enemyAmount.Add(Enemyscript);
+        spawnCount++;
+
 
     }
 }
