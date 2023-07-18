@@ -21,6 +21,7 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldown;
     private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
+    
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    

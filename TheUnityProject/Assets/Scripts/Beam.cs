@@ -13,6 +13,8 @@ public class Beam : MonoBehaviour
     public LayerMask fjender;
 
     public LayerMask wall;
+
+    public AudioSource hitMark;
     
     
     // Start is called before the first frame update
@@ -42,7 +44,9 @@ public class Beam : MonoBehaviour
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
             fjendekode.enemyhp -= 10;
+            
             print(fjendekode.enemyhp);
+            hitMark.Play();
             Debug.DrawRay(origin, direction * 1000, Color.red);
             print("fjender");
             return true;

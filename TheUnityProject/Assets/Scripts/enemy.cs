@@ -29,7 +29,7 @@ public class enemy : MonoBehaviour
         {
             mom.killCount++;
             Destroy(gameObject);
-            score += 10;
+            score += 100;
             
         }
     }
