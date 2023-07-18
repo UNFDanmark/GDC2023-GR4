@@ -19,8 +19,9 @@ public class DiogoGoncalves : MonoBehaviour
     private float sidewaysInput;
     [SerializeField] public int playerhp;
     [SerializeField]private float damagecooldown;
-    private float damagecooldowntimer;
+    [SerializeField]private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
+    [SerializeField]public AudioSource damageTaken;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
@@ -95,13 +96,15 @@ public class DiogoGoncalves : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (damagecooldowntimer <= 0)
+        if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
-            if (collision.collider.tag == "Fjende")
-            {
-                playerhp -= 10;
-                damagecooldowntimer = damagecooldown;
-            }
+            print("tookdamage");
+            playerhp -= 10;
+            damageTaken.Play();
+            damagecooldowntimer = damagecooldown;
+            print("damage"+damagecooldowntimer);
+            
+            
         }
         
    

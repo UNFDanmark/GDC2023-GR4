@@ -13,6 +13,11 @@ public class Beam : MonoBehaviour
     public LayerMask fjender;
 
     public LayerMask wall;
+
+    public AudioSource hitMark;
+
+    public float beamCooldown;
+    public float beamCooldownTimer;
     
     
     // Start is called before the first frame update
@@ -29,6 +34,11 @@ public class Beam : MonoBehaviour
             beamcheck();
             beamlyd.Play();
         }
+
+        if (beamCooldownTimer > 0);
+        {
+            beamCooldownTimer -= Time.deltaTime;
+        }
     }
 
     bool beamcheck()
@@ -38,24 +48,26 @@ public class Beam : MonoBehaviour
         direction = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
         Ray beamRay = new Ray(origin, direction);
-        if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
+        if (Physics.Raycast(beamRay, out hit, maxDistance, fjender)&& beamCooldownTimer <= 0)
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
             fjendekode.enemyhp -= 10;
-            print(fjendekode.enemyhp);
-            Debug.DrawRay(origin, direction * 1000, Color.red);
-            print("fjender");
+            
+            
+            hitMark.Play();
+            beamCooldownTimer = beamCooldown;
+            
             return true;
         }
         else if (Physics.Raycast(origin, direction, maxDistance, wall))
         {
-            Debug.DrawRay(origin, direction * 1000, Color.yellow);
-            print("væg");
+            beamCooldownTimer = beamCooldown;
+            
             return true;
         }
         else
         {
-            Debug.DrawRay(origin, direction * 1000, Color.black);
+            beamCooldownTimer = beamCooldown;
             return false;
         }
 
