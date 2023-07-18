@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Mainmenubutton : MonoBehaviour
+public class TutorialKnap : MonoBehaviour
 {
 
-    public Button startGoncalves;
-    
+    public Button tutorialButton;
     
     // Start is called before the first frame update
     void Start()
     {
-        startGoncalves.onClick.AddListener(TaskOnClick);
+        tutorialButton.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
@@ -24,10 +23,6 @@ public class Mainmenubutton : MonoBehaviour
 
     public void TaskOnClick()
     {
-        Debug.Log("Congrats");
-        
-        SceneManager.LoadScene("Level 1");
-        
+        SceneManager.LoadScene("Tutorial");
     }
-
 }

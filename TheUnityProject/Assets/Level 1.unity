@@ -4663,7 +4663,7 @@ MonoBehaviour:
   krop: {fileID: 1629264673}
   turnInputHorizontal: 0
   dashspeed: 500
-  playerhp: 1000
+  playerhp: 100
   damagecooldown: 1
   damagecooldowntimer: 0
   dashlyd: {fileID: 1629264667}
