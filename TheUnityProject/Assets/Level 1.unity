@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 14911532}
   - component: {fileID: 14911534}
   - component: {fileID: 14911533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19369693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -376,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 9, y: 0}
+  m_AnchoredPosition: {x: -1, y: -51}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &30623769
@@ -446,6 +446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
@@ -540,7 +545,7 @@ GameObject:
   - component: {fileID: 123357598}
   - component: {fileID: 123357597}
   - component: {fileID: 123357596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,6 +873,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -888,8 +898,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
@@ -903,6 +923,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c4619fb3bb57074eba6f6894cd4edf5, type: 2}
     - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -911,6 +936,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6fa6f2651867d6e4da7b8b0fe38239c7, type: 2}
+    - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -976,7 +1006,7 @@ GameObject:
   - component: {fileID: 190692252}
   - component: {fileID: 190692254}
   - component: {fileID: 190692253}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,6 +1183,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1269,6 +1304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1348,6 +1388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
@@ -1485,6 +1530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
@@ -1668,6 +1718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1827,7 +1882,7 @@ GameObject:
   - component: {fileID: 656066935}
   - component: {fileID: 656066934}
   - component: {fileID: 656066933}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2004,6 +2059,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2160,6 +2220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2311,7 +2376,7 @@ GameObject:
   - component: {fileID: 875205668}
   - component: {fileID: 875205667}
   - component: {fileID: 875205666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2483,6 +2548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2503,8 +2573,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
@@ -2518,6 +2598,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c4619fb3bb57074eba6f6894cd4edf5, type: 2}
     - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2526,6 +2611,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6fa6f2651867d6e4da7b8b0fe38239c7, type: 2}
+    - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2781,7 +2871,7 @@ GameObject:
   - component: {fileID: 955277102}
   - component: {fileID: 955277104}
   - component: {fileID: 955277103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2899,9 +2989,9 @@ GameObject:
   - component: {fileID: 992963365}
   - component: {fileID: 992963364}
   - component: {fileID: 992963363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rooms
-  m_TagString: Untagged
+  m_TagString: Bane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2994,7 +3084,7 @@ GameObject:
   - component: {fileID: 1020081804}
   - component: {fileID: 1020081806}
   - component: {fileID: 1020081805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3171,6 +3261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3194,7 +3289,7 @@ GameObject:
   - component: {fileID: 1037175149}
   - component: {fileID: 1037175151}
   - component: {fileID: 1037175150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3573,7 +3668,7 @@ GameObject:
   - component: {fileID: 1380126903}
   - component: {fileID: 1380126905}
   - component: {fileID: 1380126904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3691,7 +3786,7 @@ GameObject:
   - component: {fileID: 1416437140}
   - component: {fileID: 1416437142}
   - component: {fileID: 1416437141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3893,6 +3988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4004,6 +4104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4024,8 +4129,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
@@ -4039,6 +4154,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c4619fb3bb57074eba6f6894cd4edf5, type: 2}
     - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4047,6 +4167,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6fa6f2651867d6e4da7b8b0fe38239c7, type: 2}
+    - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4112,7 +4237,7 @@ GameObject:
   - component: {fileID: 1562098802}
   - component: {fileID: 1562098804}
   - component: {fileID: 1562098803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4519,6 +4644,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   hitMark: {fileID: 127619977}
+  beamCooldown: 1
+  beamCooldownTimer: 0
 --- !u!114 &1629264672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4536,10 +4663,11 @@ MonoBehaviour:
   krop: {fileID: 1629264673}
   turnInputHorizontal: 0
   dashspeed: 500
-  playerhp: 100
+  playerhp: 1000
   damagecooldown: 1
+  damagecooldowntimer: 0
   dashlyd: {fileID: 1629264667}
-  damageTaken: {fileID: 0}
+  damageTaken: {fileID: 867225043}
   dashcooldown: 1
   dashCooldownTimer: 0
 --- !u!54 &1629264673
@@ -4817,6 +4945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
@@ -5139,6 +5272,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5154,16 +5292,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226256450759356391, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4407973989198326909, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9c4619fb3bb57074eba6f6894cd4edf5, type: 2}
+    - target: {fileID: 4880099508911529307, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6606347814720052928, guid: 6b28ed78e91ed574d958ad38382cf7e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6fa6f2651867d6e4da7b8b0fe38239c7, type: 2}
+    - target: {fileID: 8617835151230357669, guid: 6b28ed78e91ed574d958ad38382cf7e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5276,7 +5434,7 @@ GameObject:
   - component: {fileID: 1950610138}
   - component: {fileID: 1950610137}
   - component: {fileID: 1950610136}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5512,6 +5670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd75db3ef28feb74db7b751978ff3749,
         type: 3}
