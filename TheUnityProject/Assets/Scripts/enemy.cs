@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
     private NavMeshAgent agent;
     public Transform player;
     [SerializeField] public int score;
+    public enemyspawner mom;
 
 
     // Start is called before the first frame update
@@ -26,8 +27,11 @@ public class enemy : MonoBehaviour
         agent.destination = player.position;
         if (enemyhp <= 0)
         {
+            mom.killCount++;
+            
             Destroy(gameObject);
             score += 10;
+            
         }
     }
     

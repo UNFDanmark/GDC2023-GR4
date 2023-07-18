@@ -21,6 +21,8 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldown;
     private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
+    [SerializeField] private float dashcooldown;
+    [SerializeField] private float dashCooldownTimer;
    
     
 
@@ -45,7 +47,7 @@ public class DiogoGoncalves : MonoBehaviour
         transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
         
         
-        if (Input.GetButtonDown("Dash"))
+        if (Input.GetButtonDown("Dash") && dashCooldownTimer <= 0)
         {
             Vector3 moveVector = transform.forward * (backAnForthInput);
             Vector3 leftrightVector = transform.right * (sidewaysInput);
@@ -55,12 +57,19 @@ public class DiogoGoncalves : MonoBehaviour
 
             dashlyd.Play();
 
+            dashCooldownTimer = dashcooldown;
+
 
         }
 
         if (damagecooldowntimer > 0)
         {
             damagecooldowntimer -= Time.deltaTime;
+        }
+
+        if (dashCooldownTimer > 0)
+        {
+            dashCooldownTimer -= Time.deltaTime;
         }
     }
 

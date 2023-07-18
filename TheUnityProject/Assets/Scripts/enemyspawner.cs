@@ -13,6 +13,7 @@ public class enemyspawner : MonoBehaviour
     private List<enemy> enemyAmount = new List<enemy>();
     [SerializeField] private int spawnCount = 0;
     [SerializeField] private int maxAmountOfEnemies;
+    public int killCount = 0;
     
   
     
@@ -65,6 +66,7 @@ public class enemyspawner : MonoBehaviour
         enemy Enemyscript = newEnemy.GetComponent<enemy>();
         print(Enemyscript);
         Enemyscript.player = player;
+        Enemyscript.mom = this;
         enemyAmount.Add(Enemyscript);
         spawnCount++;
 

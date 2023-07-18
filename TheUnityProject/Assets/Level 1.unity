@@ -4080,6 +4080,8 @@ MonoBehaviour:
   playerhp: 100
   damagecooldown: 1
   dashlyd: {fileID: 1629264667}
+  dashcooldown: 1
+  dashCooldownTimer: 0
 --- !u!54 &1629264673
 Rigidbody:
   m_ObjectHideFlags: 0
