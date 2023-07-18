@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -601,7 +601,6 @@ GameObject:
   - component: {fileID: 754607307}
   - component: {fileID: 754607306}
   - component: {fileID: 754607305}
-  - component: {fileID: 754607304}
   m_Layer: 0
   m_Name: game manager
   m_TagString: Untagged
@@ -609,18 +608,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &754607304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754607303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb2a9f1a296be34ba809d78ddc00cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &754607305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,7 +848,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1833cca9ff88b9145b0f703e99c4c5c0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 540bfc3f38165864b8cf00cb2451cb65, type: 2}
   m_BuildHeightMesh: 0
 --- !u!64 &907908154
 MeshCollider:
