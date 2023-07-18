@@ -12,9 +12,10 @@ public class enemyspawner : MonoBehaviour
     [SerializeField] private GameObject Enemy;
     [SerializeField] private float spawnCooldown;
     [SerializeField] private int maxAmountOfEnemies;
+    
   
     
-    public enemy Enemyscript;
+    //public enemy Enemyscript;
         
  
     private float timeLeftBetweenSpawns;
@@ -22,7 +23,7 @@ public class enemyspawner : MonoBehaviour
     [SerializeField] private Transform player;
 
     private int timeLeft;
-    float wait = 1.5;
+    float wait = 1.5f;
     
     // Start is called before the first frame update
     void Start()
@@ -60,8 +61,9 @@ public class enemyspawner : MonoBehaviour
     {
 
         GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
-        enemy enemyscript = newEnemy.GetComponent<enemy>();
-        enemyscript.player = player;
+        enemy Enemyscript = newEnemy.GetComponent<enemy>();
+        print(Enemyscript);
+        Enemyscript.player = player;
         currentAmountOfEnemies++;
 
     }

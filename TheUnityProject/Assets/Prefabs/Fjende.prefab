@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4284826772932946543}
   - component: {fileID: 1229144172323736112}
   - component: {fileID: 2168975413394802205}
-  - component: {fileID: 8235045450397303727}
   - component: {fileID: 4639978025293988600}
+  - component: {fileID: 4932338908471657006}
   m_Layer: 6
   m_Name: Fjende
   m_TagString: Fjende
@@ -107,22 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 10, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8235045450397303727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7060359035336988264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce06a315c51f55448bf327f26afca89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyhp: 140
-  fjendeCamp: {fileID: 0}
-  player: {fileID: 0}
-  score: 0
 --- !u!195 &4639978025293988600
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -133,7 +117,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 50
+  m_Speed: 20
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -145,3 +129,19 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4932338908471657006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060359035336988264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce06a315c51f55448bf327f26afca89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyhp: 20
+  fjendeCamp: {fileID: 0}
+  player: {fileID: 6200302917148000876, guid: 67a8f585ad1e68949a56b7dfd06435e8, type: 3}
+  score: 0
