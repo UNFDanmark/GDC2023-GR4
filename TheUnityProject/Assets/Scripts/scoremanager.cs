@@ -7,23 +7,26 @@ public class scoremanager : MonoBehaviour
 {
     public TMP_Text highscore;
     private int finalscore;
-    private int currenthighscore;
+    public int currenthighscore;
+    public DiogoGoncalves Goncalves;
 
     // Update is called once per frame
     void Update()
     {
-        //if (diogo.playerhp) <= 0)
+        if (Goncalves.playerhp <= 0)
         {
             finalscore = enemy.score;
             calculatehighscore(finalscore);
+            print(finalscore);
         }
     }
 
     void calculatehighscore(int finalscore)
     {
-        //if (currenthighscore < finalscore)
+        if (currenthighscore < finalscore)
         {
             currenthighscore = finalscore;
+            
         }
     }
 
