@@ -11,7 +11,7 @@ public class enemy : MonoBehaviour
     public enemyspawner fjendeCamp;
     private NavMeshAgent agent;
     public Transform player;
-    [SerializeField] public int score;
+    public static int score;
     public enemyspawner mom;
 
 
@@ -28,7 +28,6 @@ public class enemy : MonoBehaviour
         if (enemyhp <= 0)
         {
             mom.killCount++;
-            
             Destroy(gameObject);
             score += 10;
             
