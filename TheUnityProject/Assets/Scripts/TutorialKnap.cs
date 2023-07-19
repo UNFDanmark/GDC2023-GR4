@@ -23,6 +23,7 @@ public class TutorialKnap : MonoBehaviour
 
     public void TaskOnClick()
     {
+        print("virker");
         SceneManager.LoadScene("Tutorial");
     }
 }

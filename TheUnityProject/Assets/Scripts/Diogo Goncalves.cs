@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 
 public class DiogoGoncalves : MonoBehaviour
@@ -39,7 +40,7 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (playerhp <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("game over");
         }
 
         backAnForthInput = Input.GetAxis("Vertical");
@@ -98,13 +99,11 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
-            print("tookdamage");
             playerhp -= 10;
             damageTaken.Play();
             damagecooldowntimer = damagecooldown;
-            print("damage"+damagecooldowntimer);
-            
-            
+
+
         }
         
    

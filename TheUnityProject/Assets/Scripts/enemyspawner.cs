@@ -44,10 +44,8 @@ public class enemyspawner : MonoBehaviour
     {
         while (maxAmountOfEnemies > spawnCount)
         {
-            Debug.Log("Started at timestamp: " + Time.time);
             yield return new WaitForSeconds(wait);
             spawner();
-            Debug.Log("Finished at timestamp: " + Time.time);
         }
         
     }
@@ -64,7 +62,6 @@ public class enemyspawner : MonoBehaviour
 
         GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
         enemy Enemyscript = newEnemy.GetComponent<enemy>();
-        print(Enemyscript);
         Enemyscript.player = player;
         Enemyscript.mom = this;
         enemyAmount.Add(Enemyscript);

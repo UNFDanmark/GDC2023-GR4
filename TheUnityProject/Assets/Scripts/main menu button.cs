@@ -24,8 +24,7 @@ public class Mainmenubutton : MonoBehaviour
 
     public void TaskOnClick()
     {
-        Debug.Log("Congrats");
-        
+
         SceneManager.LoadScene("Level 1");
         
     }
