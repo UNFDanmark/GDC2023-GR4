@@ -19,6 +19,7 @@ public class Beam : MonoBehaviour
     public float beamCooldown;
     public float beamCooldownTimer;
     public float beamLydPitchVariation;
+    [SerializeField] public GameObject beamUI;
     
     
     // Start is called before the first frame update
@@ -52,6 +53,7 @@ public class Beam : MonoBehaviour
         direction = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
         Ray beamRay = new Ray(origin, direction);
+        beamUI.GetComponent<Animator>().SetTrigger("Beam");
         if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
@@ -70,7 +72,7 @@ public class Beam : MonoBehaviour
             beamCooldownTimer = beamCooldown;
             return false;
         }
-
+        
      
     }
 

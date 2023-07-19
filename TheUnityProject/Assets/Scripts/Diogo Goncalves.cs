@@ -73,15 +73,16 @@ public class DiogoGoncalves : MonoBehaviour
 
         if (Input.GetButtonDown("Dash") && dashCooldownTimer <= 0)
         {
-            Vector3 moveVector = transform.forward * (backAnForthInput);
-            Vector3 leftrightVector = transform.right * (sidewaysInput);
-            Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+            Vector3 moveVectordash = transform.forward * (backAnForthInput);
+            Vector3 leftrightVectordash = transform.right * (sidewaysInput);
+            Vector3 moveDirectiondash = (moveVectordash + leftrightVectordash).normalized;
             
-            krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
+            krop.AddForce(moveDirectiondash*dashspeed,ForceMode.Impulse);
 
             dashlyd.Play();
 
             dashCooldownTimer = dashcooldown;
+            
 
 
         }
@@ -95,12 +96,6 @@ public class DiogoGoncalves : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
-    }
-
-
-    void FixedUpdate()
-    {
-        //get walkForce
         Vector3 moveVector = transform.forward * (backAnForthInput);
         Vector3 leftrightVector = transform.right * (sidewaysInput);
         Vector3 moveDirection = (moveVector + leftrightVector).normalized;
@@ -114,6 +109,13 @@ public class DiogoGoncalves : MonoBehaviour
        
         
         krop.velocity = finalForce;
+    }
+
+
+    void FixedUpdate()
+    {
+        //get walkForce
+        
 
     }
     
