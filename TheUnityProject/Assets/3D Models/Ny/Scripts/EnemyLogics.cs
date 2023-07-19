@@ -14,7 +14,7 @@ public class EnemyLogics : MonoBehaviour
         Enemyspawner = GetComponent<enemyspawner>();
         int rand = Random.Range(0, 100);
 
-        if(rand < 20)
+        if(rand < 40)
         {
             isTrapped = true;
         }
