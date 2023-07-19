@@ -14,12 +14,13 @@ GameObject:
   - component: {fileID: 584660447893828612}
   - component: {fileID: 5742371766253283402}
   - component: {fileID: -4011492977351358877}
+  - component: {fileID: -5780119012714331740}
   m_Layer: 0
   m_Name: Table
   m_TagString: Obst
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7538195181988679920
 Transform:
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
 --- !u!33 &7759911434814172731
 MeshFilter:
@@ -147,3 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cc2cd151e882845b483bea08979b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &-5780119012714331740
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340233460352479087}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0480001, y: 22.311, z: 5.3910003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.004, y: -20.114, z: -0.064}
+  m_TimeToStationary: 0.5

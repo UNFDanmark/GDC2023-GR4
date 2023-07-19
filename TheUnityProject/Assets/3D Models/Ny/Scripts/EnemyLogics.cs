@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemyLogics : MonoBehaviour
 {
-    bool isTrapped;
-     Animator animator;
-
+    public bool isTrapped;
+    public Animator animator;
+    enemyspawner Enemyspawner;
 
     private void Awake()
     {
         animator = GetComponentInParent<Animator>();
+        Enemyspawner = GetComponent<enemyspawner>();
         int rand = Random.Range(0, 100);
 
         if(rand < 20)
@@ -24,12 +25,7 @@ public class EnemyLogics : MonoBehaviour
     private void Update()
     {
 
-        if (isTrapped)
-        {
-
-
-
-        }
+      
     }
 
 
@@ -39,6 +35,7 @@ public class EnemyLogics : MonoBehaviour
         {
             if (isTrapped)
             {
+                StartCoroutine(Enemyspawner.CallSpawner()); 
                 animator.SetBool("isTrapped", isTrapped);
             }
             else

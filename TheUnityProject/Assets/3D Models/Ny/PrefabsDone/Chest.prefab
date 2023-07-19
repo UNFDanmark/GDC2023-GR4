@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 7400264866521478065}
   - component: {fileID: 3377404068320233171}
   - component: {fileID: -2675359119342113985}
+  - component: {fileID: -7849166368917416617}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Obst
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5075956220633636152
 Transform:
@@ -34,7 +35,7 @@ Transform:
   - {fileID: 8685494246369091061}
   - {fileID: 385571685581664394}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7400264866521478065
 Rigidbody:
@@ -96,6 +97,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cc2cd151e882845b483bea08979b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &-7849166368917416617
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3665242295545314496}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4768781136316451025
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +129,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &385571685581664394
 Transform:
@@ -195,7 +212,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8685494246369091061
 Transform:

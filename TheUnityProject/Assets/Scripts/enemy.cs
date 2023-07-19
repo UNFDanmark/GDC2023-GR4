@@ -27,7 +27,6 @@ public class enemy : MonoBehaviour
         agent.destination = player.position;
         if (enemyhp <= 0)
         {
-            mom.killCount++;
             Destroy(gameObject);
             score += 100;
             

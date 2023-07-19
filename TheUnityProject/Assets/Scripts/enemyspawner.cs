@@ -5,24 +5,27 @@ using UnityEngine;
 
 public class enemyspawner : MonoBehaviour
 {
-    
 
-    
+     EnemyLogics logic;
+
     [SerializeField] private Transform spawnArea;
     [SerializeField] private GameObject Enemy;
     private List<enemy> enemyAmount = new List<enemy>();
     [SerializeField] private int maxAmountOfEnemies;
-    public int killCount = 0;
+
+    Vector3 offset; 
+
+     private Transform player;
+
+    float wait = 2.5f;
+
     
-
-    [SerializeField] private Transform player;
-
-    float wait = 1.5f;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CallSpawner());
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        logic = GetComponent<EnemyLogics>();
 
         maxAmountOfEnemies = Random.Range(1, 5);
 
@@ -32,7 +35,23 @@ public class enemyspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(enemyAmount.Count >= maxAmountOfEnemies)
+        {
+            for (int i = 0; i < enemyAmount.Count; i++)
+            {
+                if (enemyAmount[i] != null)
+                {
+                    return;
+                }
+                else
+                {
+                    enemyAmount.Clear();
+                    logic.animator.SetBool("isTrapped", false);
+
+                }
+            }
+
+        }
 
     }
 
@@ -51,14 +70,39 @@ public class enemyspawner : MonoBehaviour
     
     Vector3 PositionRandomizer()
     {
-        float x = Random.Range(-spawnArea.localScale.x / 2, spawnArea.localScale.x / 2);
-        float y = Random.Range(-spawnArea.localScale.y / 2, spawnArea.localScale.y / 2);
-        return new Vector3(x, 0.75f, y);
+      Vector3 spwanpoint =  spawnArea.transform.position;
+        int randomNum = Random.Range(1, 5);
+
+        switch (randomNum)
+        {
+            case 1:
+                spwanpoint.x += 20;
+                break;
+
+            case 2:
+                spwanpoint.x -= 20;
+
+                break;
+            case 3:
+                spwanpoint.z -= 20;
+
+                break;
+            case 4:
+                spwanpoint.z += 20;
+
+                break;
+
+            default:
+                break;
+
+        }
+        return spwanpoint;
+
+
     }
-    
+
     private void spawn()
     {
-
         GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
         enemy Enemyscript = newEnemy.GetComponent<enemy>();
         Enemyscript.player = player;

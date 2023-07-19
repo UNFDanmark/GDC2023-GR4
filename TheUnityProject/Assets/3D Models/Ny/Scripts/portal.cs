@@ -29,6 +29,11 @@ public class portal : MonoBehaviour
             Invoke("teleport", 1);
             animator.SetTrigger("Fade");
         }
+
+        if (other.CompareTag("Spawnpoint"))
+        {
+           Destroy( other.gameObject.GetComponent<enemyspawner>());
+        }
     }
 
     public void teleport()
@@ -40,6 +45,7 @@ public class portal : MonoBehaviour
             Destroy(roomTemplates.Rooms[i]);
         }
         roomTemplates.Rooms.Clear();
+        roomTemplates.isbaked = false;
 
         Instantiate(starterRoom, Vector3.zero, Quaternion.identity);
         Destroy(gameObject.transform.parent.gameObject);
