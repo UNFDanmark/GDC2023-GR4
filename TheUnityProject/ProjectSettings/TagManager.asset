@@ -10,6 +10,10 @@ TagManager:
   - Door
   - Spawnpoint
   - Rooms
+  - Destroyer
+  - Portal
+  - Obst
+  - Fade
   layers:
   - Default
   - TransparentFX

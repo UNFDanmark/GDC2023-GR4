@@ -11,11 +11,12 @@ public class roomSpanwer : MonoBehaviour
 
     public bool spawned;
 
+
     // Start is called before the first frame update
     void Start()
     {
         tamplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("spawn", 1);
+        Invoke("spawn", 0.3f);
     }
 
     // Update is called once per frame
@@ -54,15 +55,18 @@ public class roomSpanwer : MonoBehaviour
     {
         if (other.CompareTag("Spawnpoint"))
         {
-            roomSpanwer room = other.GetComponent<roomSpanwer>();
-           if (room.spawned == false && spawned == false)
-            {
-                Instantiate(tamplates.blockRoom, transform.position, Quaternion.identity);
-                Destroy(gameObject.transform.parent.gameObject);
+            Destroy(gameObject);
 
+            if(other.GetComponent<roomSpanwer>() != null)
+            {
+                if (other.GetComponent<roomSpanwer>().spawned == false && spawned == false)
+                {
+                    Instantiate(tamplates.blockRoom, transform.position,Quaternion.identity);
+                    Destroy(gameObject);
+                }
             }
             spawned = true;
-
+           
 
         }
 
