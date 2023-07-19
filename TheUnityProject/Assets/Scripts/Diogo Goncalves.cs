@@ -29,7 +29,7 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField] public float musicSwitchLevel;
     [SerializeField] public float musicVolumeLevel;
     [SerializeField] private float dashcooldown;
-    [SerializeField] private float dashCooldownTimer;
+    [SerializeField] public float dashCooldownTimer;
    
     
 
