@@ -22,6 +22,10 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
     [SerializeField]public AudioSource damageTaken;
+    [SerializeField] public AudioSource norMusic;
+    [SerializeField] public AudioSource lowMusic;
+    [SerializeField] public float musicSwitchTime;
+    [SerializeField] public float musicSwitchLevel;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
@@ -32,6 +36,10 @@ public class DiogoGoncalves : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        norMusic.volume = 1;
+
+        lowMusic.volume = 0;
     }
 
     // Update is called once per frame
@@ -42,7 +50,16 @@ public class DiogoGoncalves : MonoBehaviour
             Destroy(gameObject);
         }
 
-        backAnForthInput = Input.GetAxis("Vertical");
+        if (playerhp <= musicSwitchLevel)
+        {
+          
+                norMusic.volume = norMusic.volume - musicSwitchTime;
+
+                lowMusic.volume = lowMusic.volume + musicSwitchTime;
+
+        }
+
+            backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
         transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
@@ -103,8 +120,6 @@ public class DiogoGoncalves : MonoBehaviour
             damageTaken.Play();
             damagecooldowntimer = damagecooldown;
             print("damage"+damagecooldowntimer);
-            
-            
         }
         
    
