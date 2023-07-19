@@ -29,7 +29,7 @@ public class enemy : MonoBehaviour
         {
             enemyDeathSound.Play();
             Destroy(gameObject);
-            score += 100;
+            score += 15;
            
 
         }
