@@ -4730,6 +4730,7 @@ MonoBehaviour:
   hitMark: {fileID: 127619977}
   beamCooldown: 0.5
   beamCooldownTimer: 0
+  beamLydPitchVariation: 0
 --- !u!114 &1629264672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4754,9 +4755,9 @@ MonoBehaviour:
   damageTaken: {fileID: 867225043}
   norMusic: {fileID: 0}
   lowMusic: {fileID: 0}
-  musicSwitchTime: 0.0025
+  musicSwitchTime: 0.0003
   musicSwitchLevel: 40
-  musicVolumeLevel: 0.7
+  musicVolumeLevel: 0.1
   dashcooldown: 1
   dashCooldownTimer: 0
 --- !u!54 &1629264673
@@ -5280,6 +5281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0861d53be0dcc7b41be125a563b772b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Goncalves: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!1 &1842002699
 GameObject:
   m_ObjectHideFlags: 0
