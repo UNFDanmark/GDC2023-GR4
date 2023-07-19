@@ -6,7 +6,7 @@ using UnityEngine;
 public class beamcooldowntext : MonoBehaviour
 {
 
-    private int beam;
+    private float beam;
 
     public TMP_Text beamtext;
 
@@ -22,6 +22,7 @@ public class beamcooldowntext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        beam = beamscript.beamCooldownTimer;
+        beamtext.text = "Beam cooldown: " + beam;
     }
 }

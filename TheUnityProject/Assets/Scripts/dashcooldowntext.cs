@@ -21,6 +21,6 @@ public class dashcooldowntext : MonoBehaviour
     void Update()
     {
         dash = dashScript.dashCooldownTimer;
-        dashtext.text = "Dash cooldown:" + dash;
+        dashtext.text = "Dash cooldown: " + dash;
     }
 }
