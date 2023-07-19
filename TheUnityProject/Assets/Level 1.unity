@@ -5811,7 +5811,7 @@ PrefabInstance:
     - target: {fileID: 8680063336230567924, guid: fc447f8191a75fe468858a0e4164855d,
         type: 3}
       propertyPath: maxAmountOfEnemies
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
