@@ -23,6 +23,11 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
     [SerializeField]public AudioSource damageTaken;
+    [SerializeField] public AudioSource norMusic;
+    [SerializeField] public AudioSource lowMusic;
+    [SerializeField] public float musicSwitchTime = 0.0025f;
+    [SerializeField] public float musicSwitchLevel = 40f;
+    [SerializeField] public float musicVolumeLevel = 0.7f;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
@@ -33,6 +38,11 @@ public class DiogoGoncalves : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        norMusic.volume = musicVolumeLevel;
+
+        lowMusic.volume = 0;
+
     }
 
     // Update is called once per frame
@@ -46,9 +56,19 @@ public class DiogoGoncalves : MonoBehaviour
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
-        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
-        
-        
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
+
+        if (playerhp <= musicSwitchLevel)
+        {
+
+            norMusic.volume = norMusic.volume - musicSwitchTime;
+
+            if (lowMusic.volume < musicVolumeLevel)
+            {
+                lowMusic.volume = lowMusic.volume + musicSwitchTime;
+            }
+        }
+
         if (Input.GetButtonDown("Dash") && dashCooldownTimer <= 0)
         {
             Vector3 moveVector = transform.forward * (backAnForthInput);
