@@ -30,8 +30,9 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField] public float musicVolumeLevel;
     [SerializeField] private float dashcooldown;
     [SerializeField] public float dashCooldownTimer;
-   
-    
+     public AudioSource teleport;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,9 +49,11 @@ public class DiogoGoncalves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+
         if (playerhp <= 0)
         {
-            SceneManager.LoadScene("game over");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -123,18 +126,22 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
-            playerhp -= 10;
+            playerhp -= 20;
             damageTaken.Play();
             damagecooldowntimer = damagecooldown;
 
-
+            if(playerhp == 0)
+            {
+                SceneManager.LoadScene(2);
+            }
         }
         
    
     }
 
 
-    
+
+
 
 
 }

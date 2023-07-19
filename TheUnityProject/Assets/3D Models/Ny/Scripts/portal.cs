@@ -9,6 +9,8 @@ public class portal : MonoBehaviour
 
     public Animator animator;
 
+    
+
     Transform player;
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class portal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player = other.transform;
+            player.GetComponent<DiogoGoncalves>().teleport.Play();
             Invoke("teleport", 1);
             animator.SetTrigger("Fade");
         }

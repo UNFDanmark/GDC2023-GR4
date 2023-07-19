@@ -17,6 +17,6 @@ public class healthbarscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // healthBar.fillAmount = (float)Goncalves.playerhp / 100f;
+        healthBar.fillAmount = (float)Goncalves.playerhp / 100f;
     }
 }
