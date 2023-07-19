@@ -35,7 +35,7 @@ public class enemyspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyAmount.Count >= maxAmountOfEnemies)
+        if(enemyAmount.Count  >= maxAmountOfEnemies )
         {
             for (int i = 0; i < enemyAmount.Count; i++)
             {
@@ -45,8 +45,10 @@ public class enemyspawner : MonoBehaviour
                 }
                 else
                 {
-                    enemyAmount.Clear();
                     logic.animator.SetBool("isTrapped", false);
+                    enemyAmount.Clear();
+
+                    Destroy(logic);
                     Destroy(this);
 
                 }
@@ -105,11 +107,15 @@ public class enemyspawner : MonoBehaviour
 
     private void spawn()
     {
-        GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
-        enemy Enemyscript = newEnemy.GetComponent<enemy>();
-        Enemyscript.player = player;
-        Enemyscript.mom = this;
-        enemyAmount.Add(Enemyscript);
+        if (enemyAmount.Count < maxAmountOfEnemies)
+        {
+            GameObject newEnemy = Instantiate(Enemy, PositionRandomizer(), Enemy.transform.rotation);
+            enemy Enemyscript = newEnemy.GetComponent<enemy>();
+            Enemyscript.player = player;
+            Enemyscript.mom = this;
+            enemyAmount.Add(Enemyscript);
+        }
+       
     }
 }
     

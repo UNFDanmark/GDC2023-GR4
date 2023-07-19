@@ -40,7 +40,7 @@ public class portal : MonoBehaviour
 
     public void teleport()
     {
-        player.transform.position = new Vector3(0, .2f, 0);
+        player.transform.position = new Vector3(0, 2f, 0);
 
         for (int i = 0; i < roomTemplates.Rooms.Count; i++)
         {

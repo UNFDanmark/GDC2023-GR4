@@ -116,7 +116,6 @@ public class DiogoGoncalves : MonoBehaviour
        
         
         krop.velocity = finalForce;
-        print("PlayerVelocity: " + backAnForthInput);
 
     }
     
