@@ -11,26 +11,22 @@ public class enemyspawner : MonoBehaviour
     [SerializeField] private Transform spawnArea;
     [SerializeField] private GameObject Enemy;
     private List<enemy> enemyAmount = new List<enemy>();
-    [SerializeField] private int spawnCount = 0;
     [SerializeField] private int maxAmountOfEnemies;
     public int killCount = 0;
     
-  
-    
-    //public enemy Enemyscript;
-        
- 
-    private float timeLeftBetweenSpawns;
 
     [SerializeField] private Transform player;
 
-    private int timeLeft;
     float wait = 1.5f;
     
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(CallSpawner());
+
+        maxAmountOfEnemies = Random.Range(1, 5);
+
+        
     }
 
     // Update is called once per frame
@@ -42,12 +38,10 @@ public class enemyspawner : MonoBehaviour
 
     public IEnumerator CallSpawner()
     {
-        while (maxAmountOfEnemies > spawnCount)
+        while (maxAmountOfEnemies > enemyAmount.Count)
         {
-            Debug.Log("Started at timestamp: " + Time.time);
             yield return new WaitForSeconds(wait);
-            spawner();
-            Debug.Log("Finished at timestamp: " + Time.time);
+            spawn();
         }
         
     }
@@ -59,18 +53,14 @@ public class enemyspawner : MonoBehaviour
         return new Vector3(x, 0.75f, y);
     }
     
-    private void spawner()
+    private void spawn()
     {
 
         GameObject newEnemy = Instantiate(Enemy,PositionRandomizer(),Enemy.transform.rotation);
         enemy Enemyscript = newEnemy.GetComponent<enemy>();
-        print(Enemyscript);
         Enemyscript.player = player;
         Enemyscript.mom = this;
         enemyAmount.Add(Enemyscript);
-        spawnCount++;
-
-
     }
 }
     
