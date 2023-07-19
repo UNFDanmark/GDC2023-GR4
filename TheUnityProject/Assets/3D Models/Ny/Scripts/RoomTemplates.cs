@@ -11,5 +11,5 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] u;
     public GameObject[] l;
 
-
+    public GameObject blockRoom;
 }
