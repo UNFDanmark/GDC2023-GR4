@@ -46,6 +46,7 @@ public class portal : MonoBehaviour
         {
             Destroy(roomTemplates.Rooms[i]);
         }
+        enemy.score += 150;
         roomTemplates.Rooms.Clear();
         roomTemplates.isbaked = false;
 

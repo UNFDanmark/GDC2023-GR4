@@ -12,6 +12,6 @@ public class FUNNYYYYJOKE : MonoBehaviour
     void Update()
     {
        scoreupdate = enemy.score;
-       scoreText.text = "Score: " + scoreupdate;
+       scoreText.text = scoreupdate.ToString();
     }
 }
