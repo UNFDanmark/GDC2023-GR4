@@ -20,6 +20,7 @@ public class Beam : MonoBehaviour
     public float beamCooldownTimer;
     public float beamLydPitchVariation;
     [SerializeField] public GameObject beamUI;
+    [SerializeField] private int damage;
     
     
     
@@ -52,7 +53,7 @@ public class Beam : MonoBehaviour
         if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
-            fjendekode.enemyhp -= 10;
+            fjendekode.enemyhp -= damage;
 
             hitMark.pitch = beamlyd.pitch;
 
