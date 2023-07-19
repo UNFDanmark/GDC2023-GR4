@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 385571685581664394}
   - component: {fileID: 612090990033255197}
   - component: {fileID: 7219014519107052570}
+  - component: {fileID: 1682884209041246905}
   m_Layer: 0
   m_Name: TopCase (1)
   m_TagString: Untagged
@@ -196,6 +197,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &1682884209041246905
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768781136316451025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.881, y: 0.595, z: 1.011}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.036000002, y: 0.47500002, z: -0.093}
+  m_TimeToStationary: 0.5
 --- !u!1 &9079217982960705098
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +224,7 @@ GameObject:
   - component: {fileID: 8685494246369091061}
   - component: {fileID: 6241620814764089816}
   - component: {fileID: 1052789098258616008}
+  - component: {fileID: 751420350357085380}
   m_Layer: 0
   m_Name: ChestButtom (1)
   m_TagString: Untagged
@@ -279,3 +297,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &751420350357085380
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079217982960705098}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.8050001, y: 0.513, z: 0.94600004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.067, y: -0.358, z: 0}
+  m_TimeToStationary: 0.5

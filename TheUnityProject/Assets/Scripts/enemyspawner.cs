@@ -17,7 +17,7 @@ public class enemyspawner : MonoBehaviour
 
      private Transform player;
 
-    float wait = 2.5f;
+    float wait = 4f;
 
     
     
@@ -59,9 +59,10 @@ public class enemyspawner : MonoBehaviour
     {
         while (maxAmountOfEnemies > enemyAmount.Count)
         {
+            spawn();
+
             yield return new WaitForSeconds(wait);
 
-            spawn();
 
 
         }
