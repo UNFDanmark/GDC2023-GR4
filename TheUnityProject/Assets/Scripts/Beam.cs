@@ -18,6 +18,7 @@ public class Beam : MonoBehaviour
 
     public float beamCooldown;
     public float beamCooldownTimer;
+    public float beamLydPitchVariation;
     
     
     // Start is called before the first frame update
@@ -32,6 +33,9 @@ public class Beam : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             beamcheck();
+
+            beamlyd.pitch = Random.Range(1-beamLydPitchVariation,1+ beamLydPitchVariation);
+
             beamlyd.Play();
         }
 
@@ -52,8 +56,9 @@ public class Beam : MonoBehaviour
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
             fjendekode.enemyhp -= 10;
-            
-            
+
+            hitMark.pitch = beamlyd.pitch;
+
             hitMark.Play();
             beamCooldownTimer = beamCooldown;
             
