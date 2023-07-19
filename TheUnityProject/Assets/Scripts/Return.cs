@@ -24,6 +24,6 @@ public class Return : MonoBehaviour
 
     public void TaskOnClick()
     {
-        SceneManager.LoadScene("Main menu");
+        SceneManager.LoadScene("Main Menu");
     }
 }

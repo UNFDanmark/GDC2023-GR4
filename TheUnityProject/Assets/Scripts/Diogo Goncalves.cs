@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 
 public class DiogoGoncalves : MonoBehaviour
@@ -22,10 +23,6 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
     [SerializeField]public AudioSource damageTaken;
-    [SerializeField] public AudioSource norMusic;
-    [SerializeField] public AudioSource lowMusic;
-    [SerializeField] public float musicSwitchTime;
-    [SerializeField] public float musicSwitchLevel;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
@@ -36,10 +33,6 @@ public class DiogoGoncalves : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        norMusic.volume = 1;
-
-        lowMusic.volume = 0;
     }
 
     // Update is called once per frame
@@ -47,19 +40,10 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (playerhp <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("game over");
         }
 
-        if (playerhp <= musicSwitchLevel)
-        {
-          
-                norMusic.volume = norMusic.volume - musicSwitchTime;
-
-                lowMusic.volume = lowMusic.volume + musicSwitchTime;
-
-        }
-
-            backAnForthInput = Input.GetAxis("Vertical");
+        backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
         transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
@@ -115,11 +99,11 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
-            print("tookdamage");
             playerhp -= 10;
             damageTaken.Play();
             damagecooldowntimer = damagecooldown;
-            print("damage"+damagecooldowntimer);
+
+
         }
         
    
