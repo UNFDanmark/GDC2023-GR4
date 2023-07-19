@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0861d53be0dcc7b41be125a563b772b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Goncalves: {fileID: 0}
+  Goncalves: {fileID: 1629264672}
   healthBar: {fileID: 497667497}
 --- !u!114 &497667497
 MonoBehaviour:
@@ -520,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 6998976698224449476, guid: 9351c3b3e16b0f24f867c6bf38868013,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6998976698224449476, guid: 9351c3b3e16b0f24f867c6bf38868013,
         type: 3}
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 1629264678}
   - component: {fileID: 1629264677}
   - component: {fileID: 1629264676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Diogo Goncalves
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 1838986407}
   - component: {fileID: 1838986406}
   - component: {fileID: 1838986405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 1842002700}
   - component: {fileID: 1842002703}
   - component: {fileID: 1842002702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2311,7 +2311,7 @@ RectTransform:
   - {fileID: 497667495}
   - {fileID: 1215588569}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
