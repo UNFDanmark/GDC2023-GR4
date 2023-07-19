@@ -16,7 +16,7 @@ public class roomSpanwer : MonoBehaviour
     void Start()
     {
         tamplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("spawn", 0.3f);
+        Invoke("spawn", 0.1f);
     }
 
     // Update is called once per frame

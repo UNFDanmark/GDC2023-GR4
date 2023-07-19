@@ -33,6 +33,8 @@ public class portal : MonoBehaviour
         if (other.CompareTag("Spawnpoint"))
         {
            Destroy( other.gameObject.GetComponent<enemyspawner>());
+            Destroy(other.gameObject.GetComponent<EnemyLogics>());
+
         }
     }
 
