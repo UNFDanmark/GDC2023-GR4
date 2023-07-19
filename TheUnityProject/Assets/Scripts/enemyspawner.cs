@@ -47,6 +47,7 @@ public class enemyspawner : MonoBehaviour
                 {
                     enemyAmount.Clear();
                     logic.animator.SetBool("isTrapped", false);
+                    Destroy(this);
 
                 }
             }

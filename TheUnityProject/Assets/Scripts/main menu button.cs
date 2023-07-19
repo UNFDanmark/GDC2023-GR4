@@ -25,7 +25,7 @@ public class Mainmenubutton : MonoBehaviour
     public void TaskOnClick()
     {
 
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level");
         
     }
 
