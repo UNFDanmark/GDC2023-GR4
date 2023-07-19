@@ -54,10 +54,11 @@ public class roomSpanwer : MonoBehaviour
     {
         if (other.CompareTag("Spawnpoint"))
         {
-           if(other.GetComponent<roomSpanwer>().spawned == false && spawned == false)
+            roomSpanwer room = other.GetComponent<roomSpanwer>();
+           if (room.spawned == false && spawned == false)
             {
                 Instantiate(tamplates.blockRoom, transform.position, Quaternion.identity);
-                Destroy(gameObject.transform.parent);
+                Destroy(gameObject.transform.parent.gameObject);
 
             }
             spawned = true;

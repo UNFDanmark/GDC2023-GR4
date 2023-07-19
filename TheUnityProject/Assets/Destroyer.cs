@@ -8,8 +8,7 @@ public class Destroyer : MonoBehaviour
     {
         if(other.CompareTag("Spawnpoint"))
         {
-            Destroy(other.gameObject);
-
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
 }
