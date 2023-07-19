@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scoremanager : MonoBehaviour
 {
-    public TMP_Text highscore;
     private int finalscore;
     public int currenthighscore;
     public DiogoGoncalves Goncalves;
@@ -15,9 +15,9 @@ public class scoremanager : MonoBehaviour
     {
         if (Goncalves.playerhp <= 0)
         {
+            print(finalscore);
             finalscore = enemy.score;
             calculatehighscore(finalscore);
-            print(finalscore);
         }
     }
 

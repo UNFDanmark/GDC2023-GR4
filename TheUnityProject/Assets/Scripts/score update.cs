@@ -13,6 +13,5 @@ public class FUNNYYYYJOKE : MonoBehaviour
     {
        scoreupdate = enemy.score;
        scoreText.text = "Score: " + scoreupdate;
-       print("Score: " + scoreupdate);
     }
 }

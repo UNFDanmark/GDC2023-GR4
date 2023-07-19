@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Higestscore : MonoBehaviour
+public class healthbarscript : MonoBehaviour
 {
-
-    public scoremanager highscore;
-
-    public TMP_Text highestscore;
-
-    private int score;
+    [SerializeField] private DiogoGoncalves Goncalves;
+    [SerializeField] private Image healthBar;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +17,6 @@ public class Higestscore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = highscore.currenthighscore;
-        highestscore.text = "Highscore: " + score;
+        healthBar.fillAmount = (float)Goncalves.playerhp / 100f;
     }
 }

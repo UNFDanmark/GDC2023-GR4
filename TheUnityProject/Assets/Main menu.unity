@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade63ef138269f344a5bd33e0b02b914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialButton: {fileID: 0}
+  tutorialButton: {fileID: 1618968332}
 --- !u!4 &51547099
 Transform:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843302003}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Mainmenubutton, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 1

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 
 public class DiogoGoncalves : MonoBehaviour
@@ -22,6 +23,11 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]private float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
     [SerializeField]public AudioSource damageTaken;
+    [SerializeField] public AudioSource norMusic;
+    [SerializeField] public AudioSource lowMusic;
+    [SerializeField] public float musicSwitchTime;
+    [SerializeField] public float musicSwitchLevel;
+    [SerializeField] public float musicVolumeLevel;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
@@ -32,6 +38,11 @@ public class DiogoGoncalves : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        norMusic.volume = musicVolumeLevel;
+
+        lowMusic.volume = 0;
+
     }
 
     // Update is called once per frame
@@ -39,26 +50,39 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (playerhp <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("game over");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         backAnForthInput = Input.GetAxis("Vertical");
         sidewaysInput = Input.GetAxis("Horizontal");
         turnInputHorizontal = Input.GetAxis("Mouse X");
-        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);  
-        
-        
+        transform.Rotate(Vector3.up,turnSpeed * turnInputHorizontal * Time.deltaTime);
+
+        if (playerhp <= musicSwitchLevel)
+        {
+
+            norMusic.volume = norMusic.volume - musicSwitchTime;
+
+            if (lowMusic.volume < musicVolumeLevel)
+            {
+                lowMusic.volume = lowMusic.volume + musicSwitchTime;
+            }
+        }
+
         if (Input.GetButtonDown("Dash") && dashCooldownTimer <= 0)
         {
-            Vector3 moveVector = transform.forward * (backAnForthInput);
-            Vector3 leftrightVector = transform.right * (sidewaysInput);
-            Vector3 moveDirection = (moveVector + leftrightVector).normalized;
+            Vector3 moveVectordash = transform.forward * (backAnForthInput);
+            Vector3 leftrightVectordash = transform.right * (sidewaysInput);
+            Vector3 moveDirectiondash = (moveVectordash + leftrightVectordash).normalized;
             
-            krop.AddForce(moveDirection*dashspeed,ForceMode.Impulse);
+            krop.AddForce(moveDirectiondash*dashspeed,ForceMode.Impulse);
 
             dashlyd.Play();
 
             dashCooldownTimer = dashcooldown;
+            
 
 
         }
@@ -72,12 +96,6 @@ public class DiogoGoncalves : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
-    }
-
-
-    void FixedUpdate()
-    {
-        //get walkForce
         Vector3 moveVector = transform.forward * (backAnForthInput);
         Vector3 leftrightVector = transform.right * (sidewaysInput);
         Vector3 moveDirection = (moveVector + leftrightVector).normalized;
@@ -91,6 +109,13 @@ public class DiogoGoncalves : MonoBehaviour
        
         
         krop.velocity = finalForce;
+    }
+
+
+    void FixedUpdate()
+    {
+        //get walkForce
+        
 
     }
     
@@ -98,13 +123,11 @@ public class DiogoGoncalves : MonoBehaviour
     {
         if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
-            print("tookdamage");
             playerhp -= 10;
             damageTaken.Play();
             damagecooldowntimer = damagecooldown;
-            print("damage"+damagecooldowntimer);
-            
-            
+
+
         }
         
    

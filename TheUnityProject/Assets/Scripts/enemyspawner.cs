@@ -41,7 +41,10 @@ public class enemyspawner : MonoBehaviour
         while (maxAmountOfEnemies > enemyAmount.Count)
         {
             yield return new WaitForSeconds(wait);
+
             spawn();
+
+
         }
         
     }
