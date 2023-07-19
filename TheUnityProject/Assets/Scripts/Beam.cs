@@ -30,7 +30,7 @@ public class Beam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0)&& beamCooldownTimer <= 0)
         {
             beamcheck();
 
@@ -52,7 +52,7 @@ public class Beam : MonoBehaviour
         direction = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
         Ray beamRay = new Ray(origin, direction);
-        if (Physics.Raycast(beamRay, out hit, maxDistance, fjender)&& beamCooldownTimer <= 0)
+        if (Physics.Raycast(beamRay, out hit, maxDistance, fjender))
         {
             enemy fjendekode = hit.transform.gameObject.GetComponent<enemy>();
             fjendekode.enemyhp -= 10;
@@ -61,12 +61,7 @@ public class Beam : MonoBehaviour
 
             hitMark.Play();
             beamCooldownTimer = beamCooldown;
-            
-            return true;
-        }
-        else if (Physics.Raycast(origin, direction, maxDistance, wall))
-        {
-            beamCooldownTimer = beamCooldown;
+            print(hit.transform.gameObject.name);
             
             return true;
         }

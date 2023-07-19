@@ -51,7 +51,8 @@ public class DiogoGoncalves : MonoBehaviour
         if (playerhp <= 0)
         {
             SceneManager.LoadScene("game over");
-            
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         backAnForthInput = Input.GetAxis("Vertical");

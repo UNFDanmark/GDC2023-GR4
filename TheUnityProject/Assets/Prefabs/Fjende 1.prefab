@@ -1,27 +1,118 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8149174847004136148
+--- !u!1 &4646150882235733226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4486988223742203985}
+  - component: {fileID: 3702244144917278008}
+  - component: {fileID: 920097385500604820}
+  - component: {fileID: 8187563670851026264}
+  m_Layer: 6
+  m_Name: Fjende 1
+  m_TagString: Fjende
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4486988223742203985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646150882235733226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8233178089617347289}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3702244144917278008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646150882235733226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce06a315c51f55448bf327f26afca89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyhp: 20
+  fjendeCamp: {fileID: 0}
+  player: {fileID: 0}
+  mom: {fileID: 0}
+--- !u!195 &920097385500604820
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646150882235733226}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 20
+  m_Acceleration: 30
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 6
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &8187563670851026264
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646150882235733226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 6.7533994
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.8766997, z: 0}
+--- !u!1001 &8487216723543897394
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4486988223742203985}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
@@ -46,7 +137,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
@@ -145,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
       propertyPath: m_Name
-      value: Mosq (1) Variant
+      value: Mosq (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
         type: 3}
@@ -255,84 +346,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2417664735733774024}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4788602479364210677}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -6938155476181574251}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29225902e264ff1499e3415e12348c3d, type: 3}
---- !u!1 &9067653191540666245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 29225902e264ff1499e3415e12348c3d,
+--- !u!4 &8233178089617347289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29225902e264ff1499e3415e12348c3d,
     type: 3}
-  m_PrefabInstance: {fileID: 8149174847004136148}
+  m_PrefabInstance: {fileID: 8487216723543897394}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2417664735733774024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9067653191540666245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce06a315c51f55448bf327f26afca89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyhp: 20
-  fjendeCamp: {fileID: 0}
-  player: {fileID: 0}
-  mom: {fileID: 0}
---- !u!195 &-4788602479364210677
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9067653191540666245}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!136 &-6938155476181574251
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9067653191540666245}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
