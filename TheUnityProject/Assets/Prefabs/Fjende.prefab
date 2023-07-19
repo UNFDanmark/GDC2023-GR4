@@ -96,7 +96,7 @@ MonoBehaviour:
   fjendeCamp: {fileID: 0}
   player: {fileID: 6200302917148000876, guid: 67a8f585ad1e68949a56b7dfd06435e8, type: 3}
   mom: {fileID: 0}
-  enemyDeathSound: {fileID: 0}
+  enemyDeathSound: {fileID: 3020586201659171774}
 --- !u!82 &1027504612773044566
 AudioSource:
   m_ObjectHideFlags: 0
