@@ -13,7 +13,7 @@ public class enemy : MonoBehaviour
     public Transform player;
     public static int score;
     public enemyspawner mom;
-
+    [SerializeField] public AudioSource enemyDeathSound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,8 @@ public class enemy : MonoBehaviour
             mom.killCount++;
             Destroy(gameObject);
             score += 100;
-            
+            enemyDeathSound.Play();
+
         }
     }
     
