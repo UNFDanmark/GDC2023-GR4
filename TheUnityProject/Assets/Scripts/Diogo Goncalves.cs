@@ -96,6 +96,13 @@ public class DiogoGoncalves : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
+        
+    }
+
+
+    void FixedUpdate()
+    {
+        //get walkForce
         Vector3 moveVector = transform.forward * (backAnForthInput);
         Vector3 leftrightVector = transform.right * (sidewaysInput);
         Vector3 moveDirection = (moveVector + leftrightVector).normalized;
@@ -105,17 +112,11 @@ public class DiogoGoncalves : MonoBehaviour
         Vector3 finalForce = walkForce;
         finalForce.y = krop.velocity.y;
 
-        //apply dash
+        
        
         
         krop.velocity = finalForce;
-    }
-
-
-    void FixedUpdate()
-    {
-        //get walkForce
-        
+        print("PlayerVelocity: " + backAnForthInput);
 
     }
     
