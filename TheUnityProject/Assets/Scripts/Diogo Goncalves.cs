@@ -25,9 +25,9 @@ public class DiogoGoncalves : MonoBehaviour
     [SerializeField]public AudioSource damageTaken;
     [SerializeField] public AudioSource norMusic;
     [SerializeField] public AudioSource lowMusic;
-    [SerializeField] public float musicSwitchTime;
-    [SerializeField] public float musicSwitchLevel;
-    [SerializeField] public float musicVolumeLevel;
+    [SerializeField] public float musicSwitchTime = 0.0025f;
+    [SerializeField] public float musicSwitchLevel = 40f;
+    [SerializeField] public float musicVolumeLevel = 0.7f;
     [SerializeField] private float dashcooldown;
     [SerializeField] private float dashCooldownTimer;
    
