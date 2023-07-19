@@ -462,8 +462,9 @@ MonoBehaviour:
   damageTaken: {fileID: 0}
   norMusic: {fileID: 1629264667}
   lowMusic: {fileID: 1629264675}
-  musicSwitchTime: 0.00333
+  musicSwitchTime: 0.0025
   musicSwitchLevel: 40
+  musicVolumeLevel: 0.7
   dashcooldown: 0
   dashCooldownTimer: 0
 --- !u!54 &1629264673
