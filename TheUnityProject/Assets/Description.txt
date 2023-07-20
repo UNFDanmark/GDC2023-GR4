@@ -1,0 +1,12 @@
+I "A Thousand Feet Under" befinder du dig dybt under jorden i en mørk dungeon. I den fugtige kolde luft finder du intet håb for overlevelse, men utallige myggelignende humanoids som du kan prøve at slå ihjel, i kampen for måske at give hvad der er tilbage af menneskeheden håb, for igen en dag at kunne finde fred.
+
+Selve spillet er en dungeon crawler, hvor du spiller som en koldblodet heks, som har fået et softspot for menneskeheden, og som i en classic doom-like fps, skal dræbe myggevampyrer, i en uendeligt stor dungeon, ved brug af spells.
+
+Left-click for at bruge dit hit-scan spell, 
+
+Shift til at lave et dash
+
+Samt WASD til at bevæge dig rundt med livet som indsats!
+
+
+Hvor langt når du at komme før du bliver begravet A Thousand Feet Under?
