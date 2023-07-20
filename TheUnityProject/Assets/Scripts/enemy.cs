@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class enemy : MonoBehaviour
 {
@@ -11,13 +12,18 @@ public class enemy : MonoBehaviour
     public enemyspawner fjendeCamp;
     private NavMeshAgent agent;
     public Transform player;
+    DiogoGoncalves script;
+
     public static int score;
     public enemyspawner mom;
     [SerializeField] public AudioSource enemyDeathSound;
 
+    public int damageRange;
+
     // Start is called before the first frame update
     void Start()
     {
+        script = player.GetComponent<DiogoGoncalves>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -30,9 +36,27 @@ public class enemy : MonoBehaviour
             enemyDeathSound.Play();
             Destroy(gameObject);
             score += 15;
-           
+            print(Vector3.Distance(transform.position, player.transform.position));
 
         }
+
+
+        if (Vector3.Distance(transform.position, player.transform.position) <= damageRange && script.damagecooldowntimer <= 0)
+        {
+            print("CD");
+            script.playerhp -= 10;
+            script.damagecooldowntimer = script.damagecooldown;
+            script.damageTaken.Play();
+
+            if (script.playerhp <= 0)
+           {
+                enemy.score = 0;
+                SceneManager.LoadScene(2);
+            }
+
+        }
+
+
     }
     
 }

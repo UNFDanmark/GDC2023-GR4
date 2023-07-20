@@ -12,7 +12,7 @@ public class enemyspawner : MonoBehaviour
     [SerializeField] private GameObject Enemy;
     private List<enemy> enemyAmount = new List<enemy>();
     [SerializeField] private int maxAmountOfEnemies;
-
+    int enemiesSpawned;
     
 
     Vector3 offset; 
@@ -37,19 +37,23 @@ public class enemyspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyAmount.Count  >= maxAmountOfEnemies )
+        if(enemiesSpawned >= maxAmountOfEnemies )
         {
             for (int i = 0; i < enemyAmount.Count; i++)
             {
-                if (enemyAmount[i] != null)
+               if(enemyAmount[i] == null)
                 {
-                    return;
+                    enemyAmount.RemoveAt(i);
                 }
-                else
+
+
+
+                if (enemyAmount.Count <= 0 && enemiesSpawned >= maxAmountOfEnemies)
                 {
+
+          
                     logic.animator.SetBool("isTrapped", false);
                     logic.gateOpen.Play();
-                    enemyAmount.Clear();
 
                     Destroy(logic);
                     Destroy(this);
@@ -110,8 +114,9 @@ public class enemyspawner : MonoBehaviour
 
     private void spawn()
     {
-        if (enemyAmount.Count < maxAmountOfEnemies)
+        if (enemiesSpawned < maxAmountOfEnemies)
         {
+            enemiesSpawned++;
             GameObject newEnemy = Instantiate(Enemy, PositionRandomizer(), Enemy.transform.rotation);
             enemy Enemyscript = newEnemy.GetComponent<enemy>();
             Enemyscript.player = player;

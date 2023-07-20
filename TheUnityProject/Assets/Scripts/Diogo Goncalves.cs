@@ -18,8 +18,8 @@ public class DiogoGoncalves : MonoBehaviour
     private float backAnForthInput;
     private float sidewaysInput;
     [SerializeField] public int playerhp;
-    [SerializeField]private float damagecooldown;
-    [SerializeField]private float damagecooldowntimer;
+    public float damagecooldown;
+    public float damagecooldowntimer;
     [SerializeField] public AudioSource dashlyd;
     [SerializeField]public AudioSource damageTaken;
     [SerializeField] public AudioSource norMusic;
@@ -48,7 +48,10 @@ public class DiogoGoncalves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
 
         if (playerhp <= 0)
@@ -123,7 +126,7 @@ public class DiogoGoncalves : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
+        /*if (collision.collider.tag == "Fjende" && damagecooldowntimer <= 0)
         {
             playerhp -= 20;
             damageTaken.Play();
@@ -133,7 +136,7 @@ public class DiogoGoncalves : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
-        }
+        }*/
         
    
     }

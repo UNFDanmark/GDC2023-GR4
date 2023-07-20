@@ -27,6 +27,7 @@ public class RoomTemplates : MonoBehaviour
 
     private void Start()
     {
+
         InvokeRepeating("bakeNavMesh", 0, 1);
     }
 
