@@ -8,6 +8,10 @@ public class EnemyLogics : MonoBehaviour
     public Animator animator;
     enemyspawner Enemyspawner;
 
+    public AudioSource gateClose;
+    public AudioSource gateOpen;
+
+    
     private void Awake()
     {
         animator = GetComponentInParent<Animator>();
@@ -37,6 +41,8 @@ public class EnemyLogics : MonoBehaviour
             {
                 StartCoroutine(Enemyspawner.CallSpawner()); 
                 animator.SetBool("isTrapped", isTrapped);
+                gateClose.Play();
+
             }
             else
             {

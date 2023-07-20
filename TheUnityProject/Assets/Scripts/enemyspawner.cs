@@ -13,6 +13,8 @@ public class enemyspawner : MonoBehaviour
     private List<enemy> enemyAmount = new List<enemy>();
     [SerializeField] private int maxAmountOfEnemies;
 
+    
+
     Vector3 offset; 
 
      private Transform player;
@@ -46,6 +48,7 @@ public class enemyspawner : MonoBehaviour
                 else
                 {
                     logic.animator.SetBool("isTrapped", false);
+                    logic.gateOpen.Play();
                     enemyAmount.Clear();
 
                     Destroy(logic);

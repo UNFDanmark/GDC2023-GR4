@@ -770,6 +770,8 @@ PrefabInstance:
     - {fileID: 2866417849001955197, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
     - {fileID: 5290459801378026731, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
     - {fileID: 8040506845323891718, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
+    - {fileID: 5674566512487241290, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
+    - {fileID: 3129771801691075016, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1348830404306618382, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
     - {fileID: 1225468307202363289, guid: 3f7333fefb05a9c41826fbdfd04894d7, type: 3}
